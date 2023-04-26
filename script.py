@@ -54,6 +54,7 @@ for row in rows[1:]:
                 technique_info = [group_name[0:-1]] + [technique_domain] + [technique_id[-5:]] + ["Tactic: " + tactic_name] + ["Technique: " + technique_name] + [technique_desc]
                 output.append(technique_info)
 
+output.insert(0, ["group_name"] + ["technique_domain"] + ["technique_id"] + ["tactic_name"] + ["technique_name"] + ["technique_desc"])
 
 with open('output.csv', 'w', newline='') as csvfile:
     writer = csv.writer(csvfile)

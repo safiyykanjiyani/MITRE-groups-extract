@@ -1,3 +1,4 @@
+group_name,technique_domain,technique_id,tactic_name,technique_name,technique_desc
  admin@338,Enterprise,T1203,Tactic: Execution,Technique: Exploitation for Client Execution,"admin@338 has exploited client software vulnerabilities for execution, such as Microsoft Word CVE-2012-0158.[1]"
  Aoqin Dragon,Enterprise,T1203,Tactic: Execution,Technique: Exploitation for Client Execution,Aoqin Dragon has exploited CVE-2012-0158 and CVE-2010-3333 for execution against targeted systems.[1]
  APT12,Enterprise,T1203,Tactic: Execution,Technique: Exploitation for Client Execution,"APT12 has exploited multiple vulnerabilities for execution, including Microsoft Office vulnerabilities (CVE-2009-3129, CVE-2012-0158) and vulnerabilities in Adobe Reader and Flash (CVE-2009-4324, CVE-2009-0927, CVE-2011-0609, CVE-2011-0611).[2][3]"
