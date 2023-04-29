@@ -60,6 +60,6 @@ for row in rows[1:]:
                     output.append(technique_info)
 
 with open('output.csv', 'w', newline='') as csvfile:
-    output.insert(0, ["group_name"] + ["technique_domain"] + ["technique_id"] + ["tactic_name"] + ["technique_name"] + ["technique_desc"])
+    output.insert(0, ["group_name"] + ["technique_domain"] + ["technique_id"] + ["tactic_name"] + ["technique_name"] + ["technique_desc"]+ ["cve"])
     writer = csv.writer(csvfile)
     writer.writerows(output)

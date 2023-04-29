@@ -1,4 +1,4 @@
-group_name,technique_domain,technique_id,tactic_name,technique_name,technique_desc
+group_name,technique_domain,technique_id,tactic_name,technique_name,technique_desc,cve
  admin@338,Enterprise,T1203,Tactic: Execution,Technique: Exploitation for Client Execution,"admin@338 has exploited client software vulnerabilities for execution, such as Microsoft Word CVE-2012-0158.[1]",CVE-2012-0158
  Aoqin Dragon,Enterprise,T1203,Tactic: Execution,Technique: Exploitation for Client Execution,Aoqin Dragon has exploited CVE-2012-0158 and CVE-2010-3333 for execution against targeted systems.[1],CVE-2012-0158
  Aoqin Dragon,Enterprise,T1203,Tactic: Execution,Technique: Exploitation for Client Execution,Aoqin Dragon has exploited CVE-2012-0158 and CVE-2010-3333 for execution against targeted systems.[1],CVE-2010-3333
