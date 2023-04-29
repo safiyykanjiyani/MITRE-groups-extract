@@ -1,6 +1,7 @@
 import requests
 from bs4 import BeautifulSoup
 import csv
+import re
 
 url = 'https://attack.mitre.org/groups/'
 
@@ -50,12 +51,15 @@ for row in rows[1:]:
                     if "Tactic:" in i: 
                         tactic_name = i.find_next('a').text
 
+                cve_pattern = re.compile(r"CVE[-_ ]*\d{4}[-_ ]*\d{4,}")
+                cve_matches = cve_pattern.findall(technique_desc)
+                print(cve_matches)
 
-                technique_info = [group_name[0:-1]] + [technique_domain] + [technique_id[-5:]] + ["Tactic: " + tactic_name] + ["Technique: " + technique_name] + [technique_desc]
-                output.append(technique_info)
-
-output.insert(0, ["group_name"] + ["technique_domain"] + ["technique_id"] + ["tactic_name"] + ["technique_name"] + ["technique_desc"])
+                for i in cve_matches: 
+                    technique_info = [group_name[0:-1]] + [technique_domain] + [technique_id[-5:]] + ["Tactic: " + tactic_name] + ["Technique: " + technique_name] + [technique_desc] + [i]
+                    output.append(technique_info)
 
 with open('output.csv', 'w', newline='') as csvfile:
+    output.insert(0, ["group_name"] + ["technique_domain"] + ["technique_id"] + ["tactic_name"] + ["technique_name"] + ["technique_desc"])
     writer = csv.writer(csvfile)
     writer.writerows(output)
